@@ -12,9 +12,104 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #fff;
   font-size: 1em;
   line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5E5E5E;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.test {
+  background-color: #3579F5;
+  margin: auto;
+  border-radius: 10px;
+  padding: 12px 18px 15px 22px;
+}
+
+.test__wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.progress-bar {
+  position: relative;
+  align-self: center;
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dasharray: 182.212; /* Длина окружности */
+  stroke-dashoffset: 182.212; /* Изначально полный круг скрыт */
+  transition: stroke-dashoffset 0.5s; /* Плавная анимация */
+}
+.text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  fill: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.progress-75 .progress-circle {
+  stroke-dashoffset: calc(182.212 - (3 / 100) * 182.212);
+}
+
+.content__title {
+  display: inline-block;
+  border-radius: 40px;
+  padding: 0 10px;
+  margin: 0 0 3px 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  background: #2364db;
+}
+
+.content__discriotion {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 133%;
+  margin: 0;
+}
+
+.content__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  margin: 0;
+}
+
+.test__button {
+  border-radius: 6px;
+  padding: 10px 32px;
+  display: inline-flex;
+  border: none;
+  background: #f4f8ff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #4777ed;
+  align-self: center;
+  margin-left: 32px;
+  transition: opacity .3s ease-in-out;
+}
+
+.test__button:hover {
+  opacity: 0.7;
 }
 
 /*
